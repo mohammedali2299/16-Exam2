@@ -2,8 +2,8 @@
 Exam 2, problem 1.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  April 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and mohammed ali.  April 2018.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -12,7 +12,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 2.  READ the code of the  Rect  class below.
+# DONE: 2.  READ the code of the  Rect  class below.
 #
 #   Once you are confident that you understand the  Rect  class and its code,
 #   change the TO-DO for this problem to DONE.
@@ -29,14 +29,22 @@ class Rect(object):
 def run_test_problem1():
     """ Tests the   problem1   function. """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement at least 2 tests of the  problem1  function.
+    # DONE: 3. Implement at least 2 tests of the  problem1  function.
     # -------------------------------------------------------------------------
     print()
     print('--------------------------------------------------')
     print('Testing the   problem1   function:')
     print('--------------------------------------------------')
 
+    Expected = 150
+    print("The expected value is:", Expected)
+    Actual = problem1([Rect(2, 25), Rect(10, 10)])
+    print("My actual value is:", Actual)
 
+    Expected = 40
+    print("The expected value is:", Expected)
+    Actual = problem1([Rect(2, 10), Rect(4, 5)])
+    print("My actual value is:", Actual)
 def problem1(rectangles):
     """
     What comes in:  A sequence of  Rect  objects.
@@ -53,9 +61,12 @@ def problem1(rectangles):
     :return: int
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     # -------------------------------------------------------------------------
-
+    sum = 0
+    for k in range(len(rectangles)):
+        sum = sum + (rectangles[k].h * rectangles[k].w)
+    return sum
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

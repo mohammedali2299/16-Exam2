@@ -2,8 +2,8 @@
 Exam 2, problem 4.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  April 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and mohammed ali.  April 2018.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -18,12 +18,12 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
 
-    # run_test_problem4a()
-    # run_test_problem4b()
+    run_test_problem4a()
+    run_test_problem4b()
 
 
 ###############################################################################
-# TODO: 2.  READ the doc-string for the   is_prime   function below.
+# DONE: 2.  READ the doc-string for the   is_prime   function below.
 #           It is the same  is_prime  function that you have used previously,
 #           except that it returns  False  for all integers less than 2.
 #
@@ -153,9 +153,16 @@ def problem4a(strings):
       :type [str]
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+
+    for k in range(len(strings)):
+        l = len(strings[k])
+        if is_prime(l) == True:
+            return strings[k]
+    else:
+        return(-1)
 
 
 def run_test_problem4b():
@@ -254,8 +261,61 @@ def problem4b(list_of_tuples_of_strings):
     #    *** IMPORTANT:  THIS PROBLEM COUNTS ONLY 2 POINTS
     #                    AND HAS AN ELEGANT SOLUTION.  DO NOT GET STUCK ON IT!
     # -------------------------------------------------------------------------
+    # for k in range(len(list_of_tuples_of_strings)):
+    #     l = len(list_of_tuples_of_strings[k])
+    #     if is_prime(l) == False:
+    #         return False
+    #     else:
+    #         for k in range(len(list_of_tuples_of_strings)):
+    #             l = len(list_of_tuples_of_strings[k])
+    #             if is_prime(l) == True:
+    #                 return True
 
+    # if problem4a(list_of_tuples_of_strings) != -1:
+    #     return True
+    # else:
+    #     return False
 
+    # for k in range(len(list_of_tuples_of_strings)):
+    #     l = len(list_of_tuples_of_strings[k])
+    #     if is_prime(l) == True:
+    #         return True
+    # else:
+    #         return False
+
+    # num = 0
+    # for k in range(len(list_of_tuples_of_strings)):
+    #     l = len(list_of_tuples_of_strings[k])
+    #     if is_prime(l) == False:
+    #         num += 1
+    # if num == len(list_of_tuples_of_strings):
+    #     return False
+    # else:
+    #    return True
+
+    # for k in range(len(list_of_tuples_of_strings)):
+    #     return is_prime(len(list_of_tuples_of_strings[k]))
+
+    # l = len(list_of_tuples_of_strings)
+    # for k in range(l):
+    #     m = len(list_of_tuples_of_strings[k])
+    #     if is_prime(m) == True:
+    #         return True
+    #     elif len(list_of_tuples_of_strings[k]) < 2:
+    #         return False
+
+    # for k in range(len(list_of_tuples_of_strings)):
+    #     if is_prime(len(list_of_tuples_of_strings[k])) == False:
+    #         return True
+
+    sum = 0
+    for k in range(len(list_of_tuples_of_strings)):
+        # for j in range(len(list_of_tuples_of_strings[k])):
+            sum = sum + len(list_of_tuples_of_strings[k])
+            if is_prime(sum) == True:
+                    return False
+    else:
+            return True
 ###############################################################################
 # Our tests use the following to print error messages in red.
 # Do NOT change it.  You do NOT have to do anything with it.
